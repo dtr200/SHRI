@@ -1,0 +1,26 @@
+.nav__button{
+    fill: $yellow;    
+    position: relative;
+    &--up{
+        top: 23px;
+        transform: rotate(180deg);
+    }
+    &--down{
+        bottom: 23px;
+    }
+    &--hover{
+        fill: $silver;
+    }
+    &--theme-black:not(&--hover){
+        fill: $white;
+    }
+    &--theme-black{
+        fill: $grey;
+    }
+}
+
+@media(min-width: 640px){
+    .nav__button{
+        position: static;
+    }
+}

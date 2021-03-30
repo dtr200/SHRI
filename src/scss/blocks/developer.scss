@@ -1,0 +1,206 @@
+.developer{    
+    @include flex($direct: column, $align: center);
+    &--first{
+        position: relative;
+        margin: 0 auto;
+    }
+    &--first::before{
+        content: '👑';    
+        @include font($size: 32px, $height: 32px);
+        position: absolute;
+        top: -20px;
+        z-index: 1;
+    }
+    &--top-results::before{
+        content: '🔎'
+    }
+    &--vote{
+        width: 104px;
+        height: 142px;
+        border-radius: 6px;
+        justify-content: center;
+    }
+    &--voted{
+        position: relative;
+        background: $gold-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4);
+    }
+    &--theme-black:not(&--hover){
+        background: $black-theme-gold;
+    }
+    &--theme-black:not(&--voted){
+        background: $black-theme-hover;
+    }
+    &--voted::before{
+        content: '👍';    
+        @include font($size: 32px, $height: 32px);
+        position: absolute;
+        top: -11px;
+        z-index: 1;
+    }
+    &--hover{
+        background: $regular-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(255, 255, 255, 0.1);
+    }
+    &--results{
+        position: relative;
+    }
+    &--results::before{
+        content: '👍';
+        @include font($size: 32px, $height: 32px);
+        position: absolute;
+        top: -20px;
+        z-index: 1;
+    }
+    &--chart{
+        flex-direction: row;
+        column-gap: 14px;
+        padding: 16px 0;
+    }
+    &--border{
+        border-top: 2px solid $grey;
+    }
+    &--border:not(&--theme-black){
+        border-top: 2px solid $grey-light;
+    }
+    /* &--top{
+        border-top: 2px solid $grey;
+    } */
+}
+
+.developer__wrapper{
+    &--vote{
+        height: 100%;
+        @include flex($just: center, $direct: column);
+        gap: 3.2934vh;
+        margin-top: 3px;
+    }
+}
+
+.developer__photo{
+    border-radius: 50%;
+    &--theme-black{
+        filter: grayscale(100%);
+    }
+    &--lower{
+        margin-top: 4px;
+    }
+    &--chart{
+        width: 40px;
+        height: 40px;
+        // margin: 16px 0;
+    }
+}
+
+.developer__info{
+    @include flex($align: flex-start, $direct: column);
+}
+
+.developer__name{
+    width: 100%;
+    margin: 6px 0;
+    font-family: $font-roboto;
+    @include font($size: 16px, $weight: 700, $height: 112%);
+    text-align: center;
+    color: $black;
+    &--theme-black{
+        color: $white;
+    }
+    &--short{
+        width: 80%;
+    }
+    &--chart{
+        margin: 0 0 5px;
+    }
+}
+
+.developer__commits{
+    margin-bottom: 16px;
+    color: $grey-light;
+    font-family: $font-roboto;
+    @include font($size: 14px, $weight: normal, $height: 114%, $space: 0px);
+    text-align: center;
+    &--chart{
+        margin-bottom: 0;
+    }
+}
+
+.developer__votes{
+    color: $grey-light;
+    font-family: $font-roboto;
+    @include font($size: 14px, $height: 114%);
+    margin-bottom: 16px;
+    &--voted{
+        color: $black;
+        margin-bottom: 9px;
+    }
+    &--theme-black{
+        color: $grey-light;
+    }
+}
+
+@media(min-width: 640px){
+    .developer{
+        &--fifth::before{            
+            content: '👍';
+            @include font($size: 32px, $height: 32px);
+            position: absolute;
+            top: -20px;
+            z-index: 1;
+        }
+        &--hide{
+            display: none;
+        }
+        &--border{
+            border-top: none;
+        }
+        &--chart{
+            width: 100%;
+            padding: 0;
+        }
+        &--winner{
+            justify-content: flex-end;
+            padding-right: 2.3952vw;
+        }
+        &--border{
+            border-top: 0;
+            border-left: 2px solid $grey;
+        }
+        &--border:not(&--theme-black){
+            border-top: 0;
+            border-left: 2px solid $grey-light;
+        }
+        &--top{
+            @include flex($align: center);            
+            padding-left: 2.3952vw;
+        }
+    }
+    .developer__wrapper{
+        gap: 1.0638vh;
+    }
+    .developer__info{
+        &--winner{
+            margin-right: 6.4vw;
+        }
+    }
+    .developer__name{
+        &--chart{
+            text-align: left;
+        }
+    }
+}
+
+@media(min-width: 1200px){
+    .developer__name{
+        margin: 16px 0 10px;
+        &--chart{
+            margin: 0 0 4px;
+        }
+    }
+    .developer__commits{
+        margin-bottom: 26px;
+        &--chart{
+            margin-bottom: 0;
+        }
+    }
+}

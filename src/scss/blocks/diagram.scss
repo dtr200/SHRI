@@ -1,0 +1,40 @@
+.diagram{
+    width: 328px;
+}
+.diagram__wrapper{
+    //width: 328px;
+}
+
+.diagram__part{
+    filter:url(#rounded);
+    &--first{
+        stroke: url(#white-first);
+    }
+    &--second{
+        stroke: url(#white-second);
+    }
+    &--third{
+        stroke: url(#white-third);
+    }
+    &--fourth{
+        stroke: url(#white-fourth);
+    }
+    &--first.diagram__part--theme-black{
+        stroke: url(#black-first);
+    }
+    &--second.diagram__part--theme-black{
+        stroke: url(#black-second);
+    }
+    &--third.diagram__part--theme-black{
+        stroke: url(#black-third);
+    }
+    &--fourth.diagram__part--theme-black{
+        stroke: url(#black-fourth);
+    }
+}
+
+@media(min-width: 640px){
+    .diagram{
+        width: 240px;
+    }
+}

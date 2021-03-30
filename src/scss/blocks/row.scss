@@ -1,0 +1,34 @@
+.row__wrapper{
+    @include flex($align: center);
+    height: 100%;
+    &--edge-devs{
+        height: auto;
+        margin-bottom: 21px;
+    }
+    &--vote{
+        column-gap: 1.8617vw;
+    }
+}
+
+@media(min-width: 640px){
+    .row{        
+        &--edge-devs{
+            /* flex-direction: row;
+            width: calc(100% - 48px);
+            justify-content: space-between;
+            align-items: center; */
+            position: absolute;
+        }
+    }
+    .row__wrapper{
+        width: calc(100% - 104px);
+        gap: 4.6407vw;
+        @include flex($align: center, $just: center);
+        &--edge-devs{
+            height: 100%;
+            position: absolute;
+            margin-right: 3px;
+            margin-top: 4px;
+        }
+    }
+}

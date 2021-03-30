@@ -1,0 +1,88 @@
+.stats-line{
+    @include flex($just: space-between);
+    padding: 16px 0;  
+    &--border{
+        border-top: 2px solid $grey-light;
+    }  
+    &--border.stats-line--theme-black{
+        border-top: 2px solid $grey;
+    }
+}
+.stats-line__param-wrapper{
+    @include flex();
+    column-gap: 10px;
+}
+.stats-line__param,
+.stats-line__added,
+.stats-line__current{
+    font-family: $font-roboto;
+    @include font($size: 16px, $weight: 500, $height: 112%);
+}
+.stats-line__param{
+    left: 26px;
+    color: $black;
+    &--theme-black{
+        color: $white;
+    }
+}
+.stats-line__dot{    
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    &--thousand{
+        background: $sunny-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.9);
+    }
+    &--five-hundred{
+        background: $sunny-light-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4);
+    }
+    &--one-hundred{
+        background: $silver-light-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(105, 105, 105, 0.2);
+    }
+    &--one{
+        background: $silver-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(131, 131, 131, 0.6);
+    }
+    &--thousand:not(&--theme-black){
+        background: $bright-gold-gradient;
+        box-shadow: 0px 0px 20px -8px rgba(248, 158, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 162, 0, 0.9);
+    }
+    &--five-hundred:not(&--theme-black){
+        background: $darkish-gold-gradient;
+        box-shadow: 0px 0px 20px -8px rgba(147, 93, 0, 0.2), inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(202, 129, 0, 0.9);
+    }
+    &--one-hundred:not(&--theme-black){
+        background: $grey-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+    }
+    &--one:not(&--theme-black){
+        background: $dark-grey-gradient;
+        box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5);
+    }
+}
+.stats-line__values{
+    @include flex();
+    column-gap: 16px;
+}
+.stats-line__added{
+    color:$grey-light;
+    &--theme-black{
+        color: $grey; 
+    }
+}
+.stats-line__current{
+    color:$grey-light;
+    &--theme-black{
+        color: $grey; 
+    }
+}
+
+@media(min-width: 640px){
+    .page-main{
+        &--diagram{
+            flex-direction: row;
+        }
+    }
+}

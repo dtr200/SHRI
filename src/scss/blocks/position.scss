@@ -1,0 +1,205 @@
+.position{    
+    border-radius: 6px 6px 0 0;    
+    padding-top: 18px;        
+        &--first{
+            height: 46vh;            
+        }        
+        &--second{
+            height: 38.5vh;
+            border-radius: 0 6px 0 0;
+        }
+        &--third{
+            height: 31vh;
+            border-radius: 6px 0 0;
+        }
+        &--second,
+        &--fourth{
+            box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), inset -10px 0px 20px rgba(207, 207, 207, 0.25);
+        }
+        &--third,
+        &--fifth{
+            box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), inset 10px 0px 20px rgba(207, 207, 207, 0.25);
+        }
+        &--regular:not(&--top){
+            background: $regular-gradient;
+            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+        }
+        &--top:not(&--regular){
+            background: $gold-gradient;
+            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
+        }
+        &--theme-black:not(&--regular){
+            background: $black-theme-gold;
+            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4);
+        }
+        &--theme-black:not(&--top){
+            background: $black-theme-gradient;
+            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(103, 103, 103, 0.6);
+        }
+        &--voted:not(&--no-voted){
+            width: 15.9574vw;
+            margin: 0 auto;            
+            border-radius: 0;
+            background: none;
+            box-shadow: none;
+            padding: 6px 0 16px;
+        }
+        &--border:not(&--theme-black){
+            border-top: 1px solid $black;
+        }
+        &--border{
+            border-top: 1px solid $white;
+        }
+        &--chart{
+            width: 40px;
+            border-radius: 6px;
+            padding-top: 0;
+        }
+        &--column-one{
+            height: $column-higher-mobile * 112/182;
+        }
+        &--column-two{
+            height: $column-higher-mobile * 152/182;
+        }
+        &--column-three{
+            height: $column-higher-mobile * 128/182;
+        }
+        &--column-four{
+            height: $column-higher-mobile * 164/182;
+        }
+        &--column-five{
+            height: $column-higher-mobile * 118/182;
+        }
+        &--column-six{
+            height: $column-higher-mobile * 140/182;
+        }
+        &--column-seven{
+            height: $column-higher-mobile;
+        }
+        &--column-eight{
+            height: $column-lowest-height-mobile;
+        }
+        &--column-nine{
+            height: $column-lowest-height-mobile;
+        }
+}
+
+.position__number{
+    display: block;
+    text-align: center;
+    font-family: $font-roboto;
+    @include font($size: 30px, $weight: bold, $height: 107%);
+    &--theme-black{
+        color: $white;
+    }
+    &--sprint{
+        @include font($size: 16px, $weight: 500, $height: 112%);
+    }
+}
+.position__commits{
+    @include font($size: 20px, $weight: bold, $height: 110%);    
+    margin-bottom: 8px;
+    &--regular{
+        color: $grey-light;
+    }
+    &--top{
+        color: $black;
+    }
+    &--theme-black:not(&--top){
+        color: $grey;
+    }
+    &--theme-black:not(&--regular){
+        color: $white;
+    }
+}
+.position__sprint{
+    @include font($size: 16px, $weight: 500, $height: 112%);
+    color: $grey-light;
+    margin-top: 12px;
+    &--theme-black{
+        color: $grey;
+    }
+}
+
+@media(min-width: 640px){
+    .position{
+        &--first{
+            height: 24.2vh;
+        }
+        &--second,
+        &--third{
+            height: 19vh;
+        }
+        &--fourth{
+            height: 13.7vh;
+            border-radius: 0 6px 0 0;
+        }
+        &--fifth{
+            height: 13.7vh;
+            border-radius: 6px 0 0;
+        }
+        &--voted:not(&--no-voted){
+            width: auto;       
+            border-radius: 6px 0 0; 
+            background: $regular-gradient;
+            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+        }
+        &--theme-black:not(&--top){
+            background: $black-theme-gradient;
+            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(103, 103, 103, 0.6);
+        }
+        &--border{
+            border-top: 0;
+        }
+        &--border:not(&--theme-black){
+            border-top: 0;
+        }
+        &--column-one{
+            height: $column-higher-desktop * 112/182;
+        }
+        &--column-two{
+            height: $column-higher-desktop * 152/182;
+        }
+        &--column-three{
+            height: $column-higher-desktop * 128/182;
+        }
+        &--column-four{
+            height: $column-higher-desktop * 164/182;
+        }
+        &--column-five{
+            height: $column-higher-desktop * 118/182;
+        }
+        &--column-six{
+            height: $column-higher-desktop * 140/182;
+        }
+        &--column-seven{
+            height: $column-higher-desktop;
+        }
+        &--column-eight{
+            height: $column-lowest-height-desktop;
+        }
+        &--column-nine{
+            height: $column-lowest-height-desktop;
+        }
+    }
+}
+
+@media(min-width: 1200px){
+    .position{
+        &--first{
+            height: 50.2vh;
+        }
+        &--second,
+        &--third{
+            height: 39.4vh;
+        }
+        &--fourth{
+            height: 28.4vh;
+            border-radius: 0 6px 0 0;
+        }
+        &--fifth{
+            height: 28.4vh;
+            border-radius: 6px 0 0;
+        }
+    }
+}

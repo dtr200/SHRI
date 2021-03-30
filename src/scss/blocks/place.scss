@@ -1,0 +1,177 @@
+.place{
+    width: 31.9148vw;
+    max-width: 180px;
+    position: relative;
+    &--second,
+    &--third{
+        width: 27.6596vw;
+    }
+    &--fourth,
+    &--fifth{
+        width: 27.6596vw;
+        display: none;
+    }
+    &--results{
+        display: block;
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+@media(min-width: 640px){
+    .place{
+        width: 15.5689vw;
+        &--first{
+            width: 17.9641vw;
+        }    
+        &--fourth,
+        &--fifth{
+            display: block;
+        }
+        &--results{            
+            position: static;
+            z-index: 1;
+        }
+    }
+}
+
+/* Старый код с z-index-ами для колонок. 
+Не разделен на блоки place, position и developer */
+
+/* .place{
+    min-width: 120px;
+   // width: 36.5854%;
+    width: 31.9148vw;
+    max-width: 32vw;
+    position: relative;
+    z-index: 1;
+    &--first{
+        z-index: 2;
+    }
+    &--second{
+        right: $leaders-offset;
+    }
+    &--third{
+        left: $leaders-offset;
+    }
+    &--fourth,
+    &--fifth{
+        z-index: 0;
+        display: none;
+    }
+}
+
+.place__developer{
+    @include flex($direct: column, $align: center);
+    padding: 0 5px;
+    &--first{
+        position: relative;
+        margin: 0 auto;
+    }
+    &--first::before{
+        content: '👑';        
+        @include font($size: 32px, $height: 32px);
+        position: absolute;
+        top: -20px;
+    }
+    &--second{
+        margin-left: $leaders-offset;
+    }
+    &--third{
+        margin-right: $leaders-offset;
+    }
+}
+
+.place__developer-photo{
+    border-radius: 50%;
+}
+
+.place__developer-name{
+    margin: 6px 0 4px;
+    font-family: $font-roboto;
+    @include font($size: 16px, $weight: 500, $height: 112%);
+    text-align: center;
+    color: $black;
+}
+
+.place__commits{
+    margin-bottom: 16px;
+    color: $grey-light;
+    font-family: $font-roboto;
+    @include font($size: 14px, $weight: normal, $height: 114%, $space: 0px);
+    text-align: center;
+}
+
+.place__position{
+    box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+    border-radius: 6px 6px 0 0;
+    background: $regular-gradient;
+    padding-top: 18px;
+        &--first{
+            height: 48.6527vh;
+            background: $gold-gradient;
+            box-shadow: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
+        }
+        &--second{
+            height: 41.1677vh;
+            padding-left: $leaders-offset;
+        }
+        &--third{
+            height: 33.6826vh;
+            padding-right: $leaders-offset;
+        }
+}
+
+.place__position-number{
+    display: block;
+    text-align: center;
+    font-family: $font-roboto;
+    @include font($size: 30px, $weight: bold, $height: 107%);
+}
+
+@media(min-width: 640px){
+    .place{    
+        &--fourth,
+        &--fifth{
+            display: block;
+        }    
+        &--fourth{
+            right: $leaders-offset * 2;
+        }
+        &--fifth{
+            left: $leaders-offset * 2;
+        }
+    }
+
+    .place__position{
+        &--first{
+            height: 28.7234vh;
+        }
+        &--second,
+        &--third{
+            height: 23.4043vh;
+        }
+        &--fourth{
+            height: 18.0851vh;        
+            padding-left: $leaders-offset;
+        }
+        &--fifth{            
+            height: 18.0851vh;            
+            padding-right: $leaders-offset;
+        }
+    }
+    .place__developer{
+        &--fourth{
+            margin-left: $leaders-offset;
+        }
+        &--fifth{            
+            margin-right: $leaders-offset;
+        }
+        &--fifth::before{            
+            content: '👍';
+            @include font($size: 32px, $height: 32px);
+            position: absolute;
+            top: -20px;
+        }
+    }
+} */

@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+@import 'variables.scss';
+@import 'mixins.scss';
+@import 'fonts.scss';
+@import 'blocks/app.scss';
+@import 'blocks/page-header.scss';
+@import 'blocks/page-main.scss';
+@import 'blocks/place.scss';
+@import 'blocks/developer.scss';
+@import 'blocks/position.scss';
+@import 'blocks/column.scss';
+@import 'blocks/nav.scss';
+@import 'blocks/row.scss';
+@import 'blocks/number.scss';
+@import 'blocks/stats-line.scss';
+@import 'blocks/diagram.scss';
+@import 'blocks/activity.scss';
+@import 'blocks/legend.scss';

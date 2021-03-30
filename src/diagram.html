@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="stories.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="app app--theme-black">
+            <header class="page-header">
+                <h1 class="page-header__title page-header__title--theme-black">Размер коммитов</h1>
+                <h2 class="page-header__subtitle page-header__subtitle--theme-black">Спринт № 213</h2>
+            </header>
+            <main class="page-main page-main--diagram">
+                <section class="page-main__diagram">
+                    <div class="diagram__wrapper">
+                        <svg class="diagram" xmlns="http://www.w3.org/2000/svg"  xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 400 400" >  
+                            <defs>
+                                <filter id="rounded">
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" />
+                                    <!-- <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>    -->
+                                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="rounded" />
+                                    <feComposite in="SourceGraphic" in2="rounded" operator="atop"/>
+                                </filter>
+
+                                <filter id="shadow-first-theme-black" >
+
+                                        <!-- Сдвиг тени -->
+                                        <feOffset dx="0" dy="0"></feOffset>
+                                        
+                                        <!-- Размытие тени -->
+                                        <feGaussianBlur stdDeviation="20" result="offset-blur"></feGaussianBlur>
+                                        
+                                        <!-- Инвертируем drop shadow
+                                        чтобы создать внутреннюю тень -->
+                                        <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"></feComposite>
+                                        
+                                        <!-- Цвет и Прозрачность -->
+                                        <feFlood flood-color="black" flood-opacity="0.65" result="color"></feFlood>
+                                        
+                                        <!-- Обрезаем цвет внутрь тени -->
+                                        <feComposite operator="in" in="color" in2="inverse" result="shadow"></feComposite>
+                                        
+                                        <!-- Раcполагаем тень поверх элемента -->
+                                        <feComposite operator="over" in="shadow" in2="SourceGraphic"></feComposite>
+                                        </filter>
+
+                                <radialGradient id="black-first" r="85%" fx="0.5" fy="0.5">
+                                    <stop offset="50%" stop-color="#ffb533"></stop>
+                                    <stop offset="72%" stop-color="#7c6133"></stop>
+                                </radialGradient>                            
+                                <radialGradient id="black-second" r="1" fx="0.5" fy="0.5">
+                                    <stop offset="40%" stop-color="#F6BD4A"></stop>
+                                    <stop offset="50%" stop-color="#F6DFB2"></stop>
+                                    <stop offset="70%" stop-color="white"></stop>
+                                    <stop offset="90%" stop-color="#F6AC17"></stop>
+                                </radialGradient>           
+                                <radialGradient id="black-third" r="1" fx="0.5" fy="0.5">
+                                    <stop offset="40%" stop-color="#DCDCDC"></stop>
+                                    <stop offset="50%" stop-color="#FFFFFF"></stop>
+                                    <stop offset="60%" stop-color="#CDCDCD"></stop>
+                                    <stop offset="90%" stop-color="#CDCDCD"></stop>
+                                </radialGradient>
+                                <radialGradient id="black-fourth" r="1" fx="0.5" fy="0.5">
+                                    <stop offset="40%" stop-color="#DCDCDC"></stop>
+                                    <stop offset="50%" stop-color="#F3F3F3"></stop>
+                                    <stop offset="60%" stop-color="#B8B8B8"></stop>
+                                    <stop offset="90%" stop-color="#B8B8B8"></stop>
+                                </radialGradient>
+                                <radialGradient id="white-first" r="1" fx="0.6" fy="0.5">
+                                    <stop offset="40%" stop-color="#F6BD4A"></stop>
+                                    <stop offset="50%" stop-color="#F6DFB2"></stop>
+                                    <stop offset="70%" stop-color="white"></stop>
+                                    <stop offset="90%" stop-color="#F6AC17"></stop>
+                                </radialGradient>                            
+                                <radialGradient id="white-second" r="1" fx="0.4" fy="0.5">
+                                    <stop offset="40%" stop-color="#F6BD4A"></stop>
+                                    <stop offset="50%" stop-color="#F6DFB2"></stop>
+                                    <stop offset="70%" stop-color="white"></stop>
+                                    <stop offset="90%" stop-color="#F6AC17"></stop>
+                                </radialGradient>           
+                                <radialGradient id="white-third" r="1" fx="0.5" fy="0.5">
+                                    <stop offset="40%" stop-color="#DCDCDC"></stop>
+                                    <stop offset="50%" stop-color="#FFFFFF"></stop>
+                                    <stop offset="60%" stop-color="#CDCDCD"></stop>
+                                    <stop offset="90%" stop-color="#CDCDCD"></stop>
+                                </radialGradient>
+                                <radialGradient id="white-fourth" r="1" fx="0.5" fy="0.5">
+                                    <stop offset="40%" stop-color="#DCDCDC"></stop>
+                                    <stop offset="50%" stop-color="#F3F3F3"></stop>
+                                    <stop offset="60%" stop-color="#B8B8B8"></stop>
+                                    <stop offset="90%" stop-color="#B8B8B8"></stop>
+                                </radialGradient>
+                            </defs>
+                            <circle class="diagram__part diagram__part--first diagram__part--theme-black" transform="rotate(-120 200 200)" cx="200" cy="200" r="160"  fill="none"    stroke-width="50" stroke-dashoffset="1005.2" stroke-dasharray="167.5, 837.7" />
+                            <circle class="diagram__part diagram__part--second diagram__part--theme-black" transform="rotate(-58 200 200)" cx="200" cy="200" r="160"  fill="none" stroke="#FCF0D0" stroke-width="50" stroke-dashoffset="1005.2" stroke-dasharray="167.5, 837.7" />
+                            <circle class="diagram__part diagram__part--third diagram__part--theme-black" transform="rotate(5 200 200)" cx="200" cy="200" r="160"  fill="none" stroke="#C4C4C4" stroke-width="50" stroke-dashoffset="1005.2" stroke-dasharray="335, 670" />
+                            <circle class="diagram__part diagram__part--fourth diagram__part--theme-black" transform="rotate(137 200 200)" cx="200" cy="200" r="160"  fill="none" stroke="#C4C4C4" stroke-width="50" stroke-dashoffset="1005.2" stroke-dasharray="296, 695" />
+                        </svg>
+                    </div>
+                </section>
+                <section class="page-main__stats">
+                    <div class="page-main__stats-wrapper">
+                        <div class="stats-line stats-line--theme-black">
+                            <div class="stats-line__param-wrapper">
+                                <div class="stats-line__dot stats-line__dot--theme-black stats-line__dot--thousand"></div>
+                                <span class="stats-line__param stats-line__param--theme-black">>1001 строки</span>
+                            </div>
+                            <div class="stats-line__values">
+                                <span class="stats-line__added stats-line__added--theme-black">+8</span>
+                                <span class="stats-line__current stats-line__current--theme-black">30</span>
+                            </div>
+                        </div>
+                        <div class="stats-line stats-line--border stats-line--theme-black">
+                            <div class="stats-line__param-wrapper">
+                                <div class="stats-line__dot stats-line__dot--theme-black stats-line__dot--five-hundred"></div>
+                                <span class="stats-line__param stats-line__param--theme-black">501 - 1000 строк</span>
+                            </div>
+                            <div class="stats-line__values">
+                                <span class="stats-line__added stats-line__added--theme-black">+6</span>
+                                <span class="stats-line__current stats-line__current--theme-black">32</span>
+                            </div>
+                        </div>
+                        <div class="stats-line stats-line--border stats-line--theme-black">
+                            <div class="stats-line__param-wrapper">
+                                <div class="stats-line__dot stats-line__dot--theme-black stats-line__dot--one-hundred"></div>
+                                <span class="stats-line__param stats-line__param--theme-black">101 - 500 строк</span>
+                            </div>
+                            <div class="stats-line__values">
+                                <span class="stats-line__added stats-line__added--theme-black">+16</span>
+                                <span class="stats-line__current stats-line__current--theme-black">58</span>
+                            </div>
+                        </div>
+                        <div class="stats-line stats-line--border stats-line--theme-black">
+                            <div class="stats-line__param-wrapper">
+                                <div class="stats-line__dot stats-line__dot--theme-black stats-line__dot--one"></div>
+                                <span class="stats-line__param stats-line__param--theme-black">1 - 100 строк</span>
+                            </div>
+                            <div class="stats-line__values">
+                                <span class="stats-line__added stats-line__added--theme-black">+12</span>
+                                <span class="stats-line__current stats-line__current--theme-black">62</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>

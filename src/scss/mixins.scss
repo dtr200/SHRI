@@ -1,0 +1,13 @@
+@mixin flex($just: normal, $direct: row, $align: normal){
+    display: flex;
+    justify-content: $just;
+    flex-direction: $direct;
+    align-items: $align;
+}
+
+@mixin font($size: inherit, $weight: inherit, $height: inherit, $space: normal){
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $height;
+    letter-spacing: $space;
+}

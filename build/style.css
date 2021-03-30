@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px; }
+
+/* Breakpoints */
+/* Colors */
+/* Fonts */
+.page-header {
+  position: relative; }
+
+.page-header__title {
+  position: absolute;
+  width: 300px;
+  height: 64px;
+  left: 24px;
+  top: 20px;
+  /* Headline */
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 107%;
+  letter-spacing: normal;
+  font-style: normal;
+  color: #261C00; }
+
+.page-header__subtitle {
+  position: absolute;
+  width: 300px;
+  height: 18px;
+  left: 24px;
+  top: 92px;
+  /* Body */
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: normal;
+  font-style: normal;
+  color: #BFBFBF; }

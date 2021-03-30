@@ -1,0 +1,32 @@
+.page-header{
+    padding: 20px $main-margin-mobile 0;
+}
+
+.page-header__title{
+    width: 300px;
+    font-family: $font-roboto;
+    @include font($size: 30px, $weight: bold, $height: 107%);
+    color: $black;
+    &--theme-black{
+        color: $white;
+    }
+}
+
+.page-header__subtitle{
+    width: 300px;
+    margin-top: 8px;
+    font-family: $font-roboto;
+    @include font($size: 16px, $weight: 500, $height: 112%, $space: .75px);
+    color: $grey-light;
+    &--theme-black{
+        color: $grey;
+    }
+}
+
+@media(min-width: 640px){
+    .page-header__title,
+    .page-header__subtitle{
+        width: auto;
+        text-align: center;
+    }
+}

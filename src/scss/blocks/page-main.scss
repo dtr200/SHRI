@@ -1,0 +1,93 @@
+.page-main{
+    height: 100%;
+    @include flex($just: center, $align: flex-end);
+    padding: 0 $main-margin-mobile;
+    &--vote{
+        column-gap: 1.8617vw;
+    }
+    &--chart{        
+        @include flex($just: space-between, $direct: column);
+        padding: 0;
+    }
+    &--diagram{
+        height: 100%;
+        @include flex($just: space-between, $direct: column);
+        padding: 0;
+    }
+    &--activity{
+        @include flex($direct: column);
+    }
+}
+
+.page-main__graphs,
+.page-main__devs{
+    width: 100%;
+}
+.page-main__graphs{
+    --add: calc(100vw - 376px);
+    min-width: 552px;
+    height: 100%;
+    @include flex($just: center);
+    column-gap: 4.3478%;
+    position: relative;
+    right: calc(200px - var(--add));
+
+}
+.page-main__devs-wrapper{
+    padding: 8px 24px;
+}
+.page-main__position{
+    @include flex($just: flex-end, $direct: column);
+}
+.page-main__stats{
+    padding: 0 24px 11px;
+}
+.page-main__diagram{
+    height: 100%;
+    @include flex($align: center);
+    padding: 0 24px;
+}
+.page-main__diagram-wrapper{
+    width: 328px;
+}
+
+@media(min-width: 576px){
+    .page-main__graphs{
+        position: static;
+    }
+}
+
+@media(min-width: 640px){
+    .page-main{        
+        &--vote{
+            @include flex($align: center, $direct: column);
+            position: relative;
+        }
+        &--chart{
+            padding: 0 58px;
+        }
+        &--activity{
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 10px;
+        }
+    }
+    .page-main__diagram{
+        @include flex($align: center);
+        padding-left: 42px;
+        padding-right: 0;
+    }
+    .page-main__devs-wrapper{
+        @include flex();
+        padding: 24px 0;
+    }
+    .page-main__stats-wrapper{
+        width: 100%;
+        padding-top: 10px;
+    }
+    .page-main__stats{
+        width: 45%;
+        @include flex($align: center);
+        padding-right: 42px;
+    }
+}
